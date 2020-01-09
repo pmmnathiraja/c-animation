@@ -1,0 +1,430 @@
+#include<iostream>//header files(libraries)
+#include<conio.h>//header files(libraries)
+#include<windows.h>//header files(libraries)
+#include<string>//header files(libraries)
+using namespace std;//declaring namespace
+
+
+
+void animation();//function declaration for initialization
+void SetCursorPosition(int x, int y);//function declaration for initialization
+const HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);//variable declaration(globally)
+COORD c;//variable declaration(globally)
+COORD s;//variable declaration(globally)
+
+void colour1(int count)//console colour displaying initialization functoin
+{
+	if (count < 10) {
+		system("color F1");
+	}
+	else if (count < 20) {
+		system("color D2");
+	}
+	else if (count < 30) {
+		system("color C3");
+	}
+	else if (count < 40) {
+		system("color B4");
+	}
+	else if (count < 50) {
+		system("color A5");
+	}
+	else if (count < 60) {
+		system("color 76");
+	}
+	else if (count < 70) {
+		system("color 67");
+	}
+	else if (count < 80) {
+		system("color 98");
+	}
+	else if (count < 90) {
+		system("color B9");
+	}
+	else if (count < 100) {
+		system("color DA");
+	}
+	else if (count < 110) {
+		system("color 0B");
+	}
+
+}//
+void colour(int count) {
+	if (count < 10) {
+		system("color F1");
+	}
+	else if (count < 20) {
+		system("color F2");
+	}
+	else if (count < 30) {
+		system("color F3");
+	}
+	else if (count < 40) {
+		system("color F4");
+	}
+	else if (count < 50) {
+		system("color F5");
+	}
+	else if (count < 60) {
+		system("color F6");
+	}
+	else if (count < 70) {
+		system("color F7");
+	}
+	else if (count < 80) {
+		system("color F8");
+	}
+	else if (count < 90) {
+		system("color F9");
+	}
+	else if (count < 100) {
+		system("color FA");
+	}
+	else if (count < 110) {
+		system("color FB");
+	}
+}//
+
+
+
+
+void animation()//introduction animation display called with setCursorposition keyword and printing with for loops
+{
+	char line0[] = " --------------------------------------------------------------------------------------------------------    ";
+	char line1[] = " |     CCCCCCCCC   RRRRRRR     IIIIIIIIIII       CCCCCCCCC    KKK      KKK   EEEEEEEEE   TTTTTTTTTTTTT  |    ";
+	char line2[] = " |  CCCCCCCCCCC    RRRRRRRRR   IIIIIIIIIII     CCCCCCCCCCC    KKK    KKK     EEEEEEEEE   TTTTTTTTTTTTT  |    ";
+	char line3[] = " | CCCCC           RRR   RRR       III       CCCCC            KKK  KKK       EEE              TTT       |    ";
+	char line4[] = " | CCC             RRR  RRRR       III       CCC              KKKKKK         EEEEEEEEE        TTT       |    ";
+	char line5[] = " | CCCCC           RRRRRRRR        III       CCCCC            KKK  KKK       EEE              TTT       |    ";
+	char line6[] = " |  CCCCCCCCCCC    RRR   RRR   IIIIIIIIIII     CCCCCCCCCCC    KKK    KKK     EEEEEEEEE        TTT       |    ";
+	char line7[] = " |    CCCCCCCCC    RRR    RRR  IIIIIIIIIII       CCCCCCCCC    KKK      KKK   EEEEEEEEE        TTT       |    ";
+	char line8[] = " --------------------------------------------------------------------------------------------------------    ";
+
+	char line9[] = "                                       \xB2   \xB2   \xB2   \xB2   \xB2 \xB2   \xB2  ";
+	char line10[] = "                                       \xB2\xB2 \xB2\xB2  \xB2 \xB2  \xB2\xB2  \xB2 \xB2  \xB2 \xB2 ";
+	char line11[] = "                                       \xB2 \xB2 \xB2 \xB2\xB2\xB2\xB2\xB2 \xB2 \xB2 \xB2 \xB2 \xB2\xB2\xB2\xB2\xB2";
+	char line12[] = "                                       \xB2   \xB2 \xB2   \xB2 \xB2  \xB2\xB2 \xB2 \xB2   \xB2";
+	char line13[] = "                                       \xB2   \xB2 \xB2   \xB2 \xB2   \xB2 \xB2 \xB2   \xB2";
+	char line14[] = "                                      \xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCD";
+	char line15[] = "                                                                                      @'NNYP' GAMES Corp.";
+
+	int X = 30;
+	int Y = 20;
+	int k1 = X + 0, x1, y1 = Y + 0;
+	int k2 = X + 0, x2, y2 = Y + 1;
+	int k3 = X + 0, x3, y3 = Y + 2;
+	int k4 = X + 0, x4, y4 = Y + 3;
+	int k5 = X + 0, x5, y5 = Y + 4;
+	int k6 = X + 0, x6, y6 = Y + 5;
+	int k7 = X + 0, x7, y7 = Y + 6;
+
+	int count = 0;
+	for (int x0 = X; x0 < X + 107; x0++) {
+		colour(x0);
+
+		SetCursorPosition(x0, Y - 1);
+		cout << line0[count];
+		SetCursorPosition(x0, Y + 7);
+		cout << line8[count];
+		count++;
+		colour(count);
+	}
+	for (x1 = k1; x1 < k1 + 12; x1++) {
+		SetCursorPosition(x1, y1);
+		cout << line1[x1 - k1];
+	}
+	for (x2 = k2; x2 < k2 + 10; x2++) {
+		SetCursorPosition(x2, y2);
+		cout << line2[x2 - k2];
+	}
+	for (x3 = k3; x3 < k3 + 8; x3++) {
+		SetCursorPosition(x3, y3);
+		cout << line3[x3 - k3];
+	}
+	for (x4 = k4; x4 < k4 + 6; x4++) {
+		SetCursorPosition(x4, y4);
+		cout << line4[x4 - k4];
+	}
+	for (x5 = k5; x5 < k5 + 4; x5++) {
+		SetCursorPosition(x5, y5);
+		cout << line5[x5 - k5];
+	}
+	for (x6 = k6; x6 < k6 + 2; x6++) {
+		SetCursorPosition(x6, y6);
+		cout << line6[x6 - k6];
+	}
+	for (x7 = k7; x7 < k7 + 0; x7++) {
+		SetCursorPosition(x7, y7);
+		cout << line7[x7 - k7];
+	}
+	k1 = X + 12;
+	k2 = X + 10;
+	k3 = X + 8;
+	k4 = X + 6;
+	k5 = X + 4;
+	k6 = X + 2;
+	k7 = X + 0;
+	for (int count = 0; count < 107; count++) {
+		colour(count);
+		if (count < 95) {
+			for (x1 = k1; x1 < k1 + 1; x1++) {
+				SetCursorPosition(x1, y1);
+				cout << line1[count + 12];
+			}
+		}
+		k1 = x1;
+		Sleep(0.1);
+		if (count < 97) {
+			for (x2 = k2; x2 < k2 + 1; x2++) {
+				SetCursorPosition(x2, y2);
+				cout << line2[count + 10];
+			}
+		}
+		k2 = x2;
+		Sleep(0.1);
+		if (count < 99) {
+			for (x3 = k3; x3 < k3 + 1; x3++) {
+				SetCursorPosition(x3, y3);
+				cout << line3[count + 8];
+			}
+		}
+		k3 = x3;
+		Sleep(0.1);
+		if (count < 101) {
+			for (x4 = k4; x4 < k4 + 1; x4++) {
+				SetCursorPosition(x4, y4);
+				cout << line4[count + 6];
+			}
+		}
+		k4 = x4;
+		Sleep(0.1);
+		if (count < 103) {
+			for (x5 = k5; x5 < k5 + 1; x5++) {
+				SetCursorPosition(x5, y5);
+				cout << line5[count + 4];
+			}
+		}
+		k5 = x5;
+		Sleep(0.1);
+		for (x6 = k6; x6 < k6 + 1; x6++) {
+			SetCursorPosition(x6, y6);
+			cout << line6[count + 2];
+		}
+		k6 = x6;
+		Sleep(0.1);
+		for (x7 = k7; x7 < k7 + 1; x7++) {
+			SetCursorPosition(x7, y7);
+			cout << line7[count + 0];
+		}
+		k7 = x7;
+		Sleep(0.1);
+	}
+	int p = X;
+	int p1 = Y + 10;
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1);
+		cout << line9[x];
+		Sleep(0.2);
+		colour(5);
+	}
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1 + 1);
+		cout << line10[x];
+		Sleep(0.2);
+		colour(15);
+	}
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1 + 2);
+		cout << line11[x];
+		Sleep(0.2);
+		colour(25);
+	}
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1 + 3);
+		cout << line12[x];
+		Sleep(0.2);
+		colour(35);
+	}
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1 + 4);
+		cout << line13[x];
+		Sleep(0.2);
+		colour(45);
+	}
+	for (int x = 0; x < 66; x++) {
+		SetCursorPosition(p + x, p1 + 5);
+		cout << line14[x];
+		Sleep(0.2);
+		colour(55);
+	}
+	for (int x = 0; x < 106; x++) {
+		SetCursorPosition(p + x, p1 + 6);
+		cout << line15[x];
+		Sleep(0.2);
+		colour(95);
+	}
+	//************************************************************************************************************************
+	k1 = X + 0, x1, y1 = Y + 0;
+	k2 = X + 0, x2, y2 = Y + 1;
+	k3 = X + 0, x3, y3 = Y + 2;
+	k4 = X + 0, x4, y4 = Y + 3;
+	k5 = X + 0, x5, y5 = Y + 4;
+	k6 = X + 0, x6, y6 = Y + 5;
+	k7 = X + 0, x7, y7 = Y + 6;
+
+
+	count = 0;
+	for (int x0 = X; x0 < X + 107; x0++) {
+		colour(x0);
+		SetCursorPosition(x0, Y - 1);
+		cout << " ";
+		SetCursorPosition(x0, Y + 7);
+		cout << " ";
+		count++;
+	}
+	for (x1 = k1; x1 < k1 + 12; x1++) {
+		SetCursorPosition(x1, y1);
+		cout << " ";
+	}
+	for (x2 = k2; x2 < k2 + 10; x2++) {
+		SetCursorPosition(x2, y2);
+		cout << " ";
+	}
+	for (x3 = k3; x3 < k3 + 8; x3++) {
+		SetCursorPosition(x3, y3);
+		cout << " ";
+	}
+	for (x4 = k4; x4 < k4 + 6; x4++) {
+		SetCursorPosition(x4, y4);
+		cout << " ";
+	}
+	for (x5 = k5; x5 < k5 + 4; x5++) {
+		SetCursorPosition(x5, y5);
+		cout << " ";
+	}
+	for (x6 = k6; x6 < k6 + 2; x6++) {
+		SetCursorPosition(x6, y6);
+		cout << " ";
+	}
+	for (x7 = k7; x7 < k7 + 0; x7++) {
+		SetCursorPosition(x7, y7);
+		cout << " ";
+	}
+	k1 = X + 12;
+	k2 = X + 10;
+	k3 = X + 8;
+	k4 = X + 6;
+	k5 = X + 4;
+	k6 = X + 2;
+	k7 = X + 0;
+	for (int count = 0; count < 107; count++) {
+		colour(count);
+		if (count < 95) {
+			for (x1 = k1; x1 < k1 + 1; x1++) {
+				SetCursorPosition(x1, y1);
+				cout << " ";
+			}
+		}
+		k1 = x1;
+		Sleep(0.1);
+		if (count < 97) {
+			for (x2 = k2; x2 < k2 + 1; x2++) {
+				SetCursorPosition(x2, y2);
+				cout << " ";
+			}
+		}
+		k2 = x2;
+		Sleep(0.1);
+		if (count < 99) {
+			for (x3 = k3; x3 < k3 + 1; x3++) {
+				SetCursorPosition(x3, y3);
+				cout << " ";
+			}
+		}
+		k3 = x3;
+		Sleep(0.1);
+		if (count < 101) {
+			for (x4 = k4; x4 < k4 + 1; x4++) {
+				SetCursorPosition(x4, y4);
+				cout << " ";
+			}
+		}
+		k4 = x4;
+		Sleep(0.1);
+		if (count < 103) {
+			for (x5 = k5; x5 < k5 + 1; x5++) {
+				SetCursorPosition(x5, y5);
+				cout << " ";
+			}
+		}
+		k5 = x5;
+		Sleep(0.1);
+		for (x6 = k6; x6 < k6 + 1; x6++) {
+			SetCursorPosition(x6, y6);
+			cout << " ";
+		}
+		k6 = x6;
+		Sleep(0.1);
+		for (x7 = k7; x7 < k7 + 1; x7++) {
+			SetCursorPosition(x7, y7);
+			cout << " ";
+		}
+		k7 = x7;
+		Sleep(0.1);
+
+	}
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1);
+		cout << " ";
+
+		colour(65);
+	}
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1 + 1);
+		cout << " ";
+
+		colour(55);
+	}
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1 + 2);
+		cout << " ";
+		colour(45);
+	}
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1 + 3);
+		cout << " ";
+		colour(35);
+	}
+	for (int x = 0; x < 65; x++) {
+		SetCursorPosition(p + x, p1 + 4);
+		cout << " ";
+		colour(25);
+	}
+	for (int x = 0; x < 66; x++) {
+		SetCursorPosition(p + x, p1 + 5);
+		cout << " ";
+		colour(15);
+	}
+	for (int x = 0; x < 106; x++) {
+		SetCursorPosition(p + x, p1 + 6);
+		cout << " ";
+		colour(55);
+	}
+	colour(15);
+	SetCursorPosition(0, 0);
+}
+
+void SetCursorPosition(int x, int y)//function for initialize setCursorPosition function
+{
+	HANDLE output = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD pos = { (SHORT)x,(SHORT)y };
+	SetConsoleCursorPosition(output, pos);
+
+}
+
+int main()//main functions
+
+{
+	animation();
+	return 0;
+}
